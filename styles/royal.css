@@ -1,0 +1,222 @@
+.royal {
+  height: 100vh;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.royal-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.royal-instructions-open {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.royal-instructions-open button {
+  width: 50px;
+  height: 50px;
+  background: #B8EE46;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.royal-instructions-open button img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.royal-close-instructions {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.royal-close-instructions button {
+  width: 50px;
+  height: 50px;
+  background: #B8EE46;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.royal-close-instructions button img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.royal-button-back {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.royal-button-back button {
+  cursor: pointer;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  background: #B8EE46;
+}
+
+.royal-button-back button img {
+  display: flex;
+  margin: 0 auto;
+}
+
+.royal-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/royal/images/background.jpg");
+  position: absolute;
+}
+
+.royal-top-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 25px;
+}
+
+
+.royal-game-name p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.royal-card {
+  width: 191px;
+  height: 178px;
+}
+
+.royal-number-back-style {
+  color: #ffffff;
+  font-size: 128px;
+  font-weight: 900;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.royal-number-back-style.start {
+  font-size: 35px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.royal-front {
+  width: 191px;
+  height: 178px;
+
+  background: #B8EE46;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: perspective(600px) rotateY(0deg);
+  transition: 0.5s ease-in;
+}
+
+.royal-back {
+  width: 191px;
+  height: 178px;
+
+  background: #B8EE46;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  transition: 0.5s ease-in;
+}
+
+.royal-game-button {
+  display: flex;
+  column-gap: 65px;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+}
+
+.royal-button-here {
+  width: 184px;
+  height: 45px;
+  background: linear-gradient(180deg, #90CD43 0%, #5A802A 68%, #486722 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.royal-button-here:active {
+  transform: scale(95%);
+}
+
+.royal-button-generation-active {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes rotate-1 {
+  from {
+    transform: rotate(360deg)
+  }
+
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+.royal-button-generation {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

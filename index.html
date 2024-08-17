@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/aviator.css">
+  <link rel="stylesheet" href="styles/luckyjet.css">
+  <link rel="stylesheet" href="styles/rocket-queen.css">
+  <link rel="stylesheet" href="styles/drukwidecyr-bold.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>JetSignal</title>
+</head>
+
+<body>
+
+  <header id="header" class="header">
+    <div class="header-inner">
+      <div class="header-line"></div>
+      <p class="header-logo-text">JETSIGNAL</p>
+
+      <div class="header-logo-img">  </div>
+    </div>
+  </header>
+
+  <section id="page-home" class="choose">
+    <p class="lng-choose">CHOOSE GAME</p>
+    <div class="choose-card">
+      <button id="aviator-go" class="choose-button"></button>
+      <button id="rocket-queen-go" class="choose-button"></button>
+      <button id="luckyjet-go" class="choose-button"></button>
+      <!-- <button id="royal-go" class="choose-button">
+        <img src="assets/icon/choose/royalmines.svg" alt="royalmines">
+      </button>
+      <button id="bumpucks-go" class="choose-button">
+        <img src="assets/icon/choose/bompucks.svg" alt="bompucks">
+      </button> -->
+    </div>
+  </section>
+
+  <section id="page-info" class="info b-none">
+    <div class="info-inner">
+      <h1 class="info-title lng-infoTitle">INSTRUCTIONS</h1>
+      <p class="info-text lng-infoMainContent">The bot is based on and trained using OpenAI's neural network cluster
+        🖥[ChatGPT-v4].<br><br>
+
+        For training, the bot played 🎰over 8000 games.
+        Currently, bot users successfully make 20-30% of their 💸capital daily!<br><br>
+
+        The bot is still learning, and its accuracy
+        is at 85%!<br>
+
+        Follow these instructions for maximum profit:<br><br>
+
+        🔸 1. Register at the 1WIN betting office.If it doesn’t open - use a VPN (Sweden).I use VPN Super Unlimited
+        Proxy
+        Access to signals will not be available without registration!<br>
+        🔸 2. Deposit funds into your account.<br>
+        🔸 3. Go to the 1win games section and select the game.<br>
+        🔸 4. Request a signal from the bot and place bets based on the bot’s signals.<br>
+        🔸 5. In case of a losing signal, we advise you to double (X2) your bet to fully cover the loss in the next
+        signal.<br></p>
+    </div>
+  </section>
+
+  <section id="page-channel" class="page-channel b-none">
+    <div class="channel-inner">
+      <h1 class="channel-title lng-channelTitle">Join our TG channel</h1>
+      <a href="https://t.me/+0IDeZKrFW9FjMTdi" class="channel-button lng-channelButtton">JOIN CHANNEL</a>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+
+    <div class="menu-button-inner">
+
+      <button id="menu-button-info" class="menu-button">
+        <img src="assets/icon/menu/info.png" alt="info" draggable="false">
+        <p class="lng-info">Info</p>
+      </button>
+
+      <button id="menu-button-home" class="menu-button">
+        <img src="assets/icon/menu/home.png" alt="home" draggable="false">
+        <p class="lng-home">Home</p>
+      </button>
+
+      <button id="menu-button-channel" class="menu-button">
+        <img src="assets/icon/menu/channel.png" alt="channel" draggable="false">
+        <p class="lng-channel">Channel</p>
+      </button>
+
+      <div id="menu-button-active" class="menu-button-active"></div>
+
+
+    </div>
+
+  </section>
+
+  <section id="page-aviator" class="aviator b-none">
+    <div class="aviator-inner">
+
+      <div class="aviator-button-back aviator">
+        <button id="backHome">
+          <img src="assets/icon/game/back.svg" alt="back">
+        </button>
+      </div>
+
+      <div class="aviator-background"></div>
+
+      <div id="aviator-error-notification" class="aviator-error-notification deactivate">
+        <div class="aviator-error-background"></div>
+        <img class="aviator-icon-error" src="assets/aviator/icons/error.svg" alt="error">
+        <p id="aviator-text-error" class="aviator-text-error lng-notification">Wait for the time to expire</p>
+        <div id="aviator-error-exit" class="aviator-error-exit">
+          <img src="assets/aviator/icons/error-exit.svg" alt="exit">
+        </div>
+        <div id="aviator-error-progress" class="aviator-error-progress"></div>
+      </div>
+
+      <div class="aviator-top-content">
+        <img draggable="false" src="assets/aviator/icons/logo.svg" alt="logo" class="aviator-logo-game">
+        <p class="aviator-name-bot">@...</p>
+      </div>
+
+      <div class="aviator-container">
+        <div class="aviator-print-signal" id="aviator-print-signal"><span class="lng-allGameStartOne">Click on<br>"GET
+            SIGNAL"</span></div>
+      </div>
+
+      <div class="aviator-button-content">
+        <div class="aviator-stop-signal-time aviator-deactivate" id="aviator-stop-signal-time-block">
+          <p class="aviator-stop-timer" id="aviator-stop-timer"></p>
+          <div class="aviator-stop-progress" id="aviator-stop-progress"></div>
+        </div>
+        <div class="aviator-button-game">
+          <button class="aviator-get-signal lng-allGameGetSignal" id="aviator-get-signal">GET SIGNAL</button>
+          <button class="aviator-get-signal-two aviator-deactivate lng-allGameGetSignal" id="aviator-get-signal-two">GET
+            SIGNAL</button>
+          <a href="https://1wzlcz.life/casino/play/aviator" class="aviator-game-here lng-allGameGameHere">GAME
+            HERE</a>
+        </div>
+      </div>
+
+
+    </div>
+    <img class="aviator-pers-animate" src="assets/aviator/icons/plane.svg" alt="plane">
+  </section>
+
+  <section id="page-luckyjet" class="luckyjet b-none">
+    <div class="luckyjet-inner">
+      <div class="luckyjet-button-back">
+        <button id="backHome">
+          <img src="assets/icon/game/back.svg" alt="back">
+        </button>
+      </div>
+
+      <div class="luckyjet-background"></div>
+
+
+      <div id="luckyjet-error-notification" class="luckyjet-error-notification luckyjet-deactivate">
+        <div class="luckyjet-error-background"></div>
+        <img class="luckyjet-icon-error" src="assets/luckyjet/icons/error.svg" alt="error">
+        <p id="luckyjet-text-error" class="luckyjet-text-error lng-notification">Wait for the time to expire</p>
+        <div id="luckyjet-error-exit" class="luckyjet-error-exit">
+          <img src="assets/luckyjet/icons/error-exit.svg" alt="exit">
+        </div>
+        <div id="luckyjet-error-progress" class="luckyjet-error-progress"></div>
+      </div>
+
+      <div class="luckyjet-top-content">
+        <img draggable="false" src="assets/luckyjet/icons/logo.png" alt="logo" class="luckyjet-logo-game">
+        <p class="luckyjet-name-bot">@...</p>
+      </div>
+
+      <div class="luckyjet-container">
+        <div class="luckyjet-print-signal" id="luckyjet-print-signal"><span class="lng-allGameStartOne">Click on<br>"GET
+            SIGNAL"</span></div>
+        <div class="luckyjet-button-content">
+          <div class="luckyjet-stop-signal-time luckyjet-deactivate" id="luckyjet-stop-signal-time-block">
+            <p class="luckyjet-stop-timer" id="luckyjet-stop-timer"></p>
+            <div class="luckyjet-stop-progress" id="luckyjet-stop-progress"></div>
+          </div>
+          <div class="luckyjet-button-game">
+            <button class="luckyjet-get-signal lng-allGameGetSignal" id="luckyjet-get-signal">GET SIGNAL</button>
+            <button class="luckyjet-get-signal-two luckyjet-deactivate lng-allGameGetSignal"
+              id="luckyjet-get-signal-two">GET
+              SIGNAL</button>
+            <a href="https://1wzlcz.life/casino/play/1play_1play_luckyjet"
+              class="luckyjet-game-here lng-allGameGameHere">GAME HERE</a>
+          </div>
+        </div>
+      </div>
+
+      <img class="luckyjet-pers-animate" src="assets/luckyjet/images/pers.png" alt="">
+    </div>
+  </section>
+
+  <section id="page-rocket-queen" class="rocket-queen b-none">
+    <div class="rocket-queen-inner">
+      <div class="rocket-queen-button-back">
+        <button id="backHome">
+          <img src="assets/icon/game/back.svg" alt="back">
+        </button>
+      </div>
+
+      <div class="rocket-queen-background"></div>
+
+
+      <div id="rocket-queen-error-notification" class="rocket-queen-error-notification rocket-queen-deactivate">
+        <div class="rocket-queen-error-background"></div>
+        <img class="rocket-queen-icon-error" src="assets/luckyjet/icons/error.svg" alt="error">
+        <p id="rocket-queen-text-error" class="rocket-queen-text-error lng-notification">Wait for the time to expire</p>
+        <div id="rocket-queen-error-exit" class="rocket-queen-error-exit">
+          <img src="assets/luckyjet/icons/error-exit.svg" alt="exit">
+        </div>
+        <div id="rocket-queen-error-progress" class="rocket-queen-error-progress"></div>
+      </div>
+
+      <div class="rocket-queen-top-content">
+        <img draggable="false" src="assets/rocket-queen/icons/logo.png" alt="logo" class="rocket-queen-logo-game">
+        <p class="rocket-queen-name-bot">@...</p>
+      </div>
+
+      <div class="rocket-queen-container">
+        <div class="rocket-queen-print-signal" id="rocket-queen-print-signal">
+          <span class="lng-allGameStartOne">
+            Click on<br>"GET SIGNAL"
+          </span>
+        </div>
+        <div class="rocket-queen-button-content">
+          <div class="rocket-queen-stop-signal-time rocket-queen-deactivate" id="rocket-queen-stop-signal-time-block">
+            <p class="rocket-queen-stop-timer" id="rocket-queen-stop-timer"></p>
+            <div class="rocket-queen-stop-progress" id="rocket-queen-stop-progress"></div>
+          </div>
+          <div class="rocket-queen-button-game">
+            <button class="rocket-queen-get-signal lng-allGameGetSignal" id="rocket-queen-get-signal">GET SIGNAL</button>
+            <button class="rocket-queen-get-signal-two rocket-queen-deactivate lng-allGameGetSignal"
+              id="rocket-queen-get-signal-two">GET
+              SIGNAL</button>
+            <a href="https://1wzlcz.life/casino/play/1play_1play_rocketqueen"
+              class="rocket-queen-game-here lng-allGameGameHere">GAME HERE</a>
+          </div>
+        </div>
+      </div>
+
+      <img class="rocket-queen-pers-animate" src="assets/rocket-queen/images/pers.png" alt="">
+    </div>
+  </section>
+
+  <script src="script/variables.js"></script>
+  <script src="script/menu.js"></script>
+  <script src="script/aviator.js"></script>
+  <script src="script/luckyjet.js"></script>
+  <script src="script/rocket-queen.js"></script>
+  <script src="script/lang.js"></script>
+</body>
+
+</html>

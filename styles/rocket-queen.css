@@ -1,0 +1,333 @@
+.rocket-queen {
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+}
+
+.rocket-queen-inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.rocket-queen-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  background-image: url("../assets/rocket-queen/images/background.png");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.rocket-queen-logo-game {
+  width: 150px;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.rocket-queen-button-back {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 500;
+}
+
+.rocket-queen-button-back button {
+  cursor: pointer;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  position: relative;
+  background: #ff9333;
+}
+
+.rocket-queen-button-back button img {
+  display: flex;
+  margin: 0 auto;
+}
+
+.rocket-queen-pers-animate {
+  position: absolute;
+  left: -205px;
+  top: 138px;
+  z-index: 0;
+  width: 200px;
+  animation: cowmove 10s infinite;
+}
+
+@keyframes cowmove {
+  0% {
+    transform: translateX(0px) rotateY(0deg);
+  }
+
+  49% {
+    transform: translateX(160px) translateY(-25px) rotateY(0deg);
+  }
+
+  50% {
+    transform: translateX(160px) translateY(-25px) rotateY(0deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotateY(0deg);
+  }
+}
+
+
+.rocket-queen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 290px;
+}
+
+.rocket-queen-error-notification {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -25px;
+  clip-path: inset(0px round 10px 10px);
+  transition: all .2s;
+  transform: translateY(-99px);
+  z-index: 999;
+}
+
+.rocket-queen-error-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  height: 50px;
+  background: #FFEBEB;
+  border-radius: 10px;
+  margin-bottom: -52px;
+}
+
+.rocket-queen-icon-error {
+  z-index: 2;
+}
+
+.rocket-queen-error-exit {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+  background: #FFC2C2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.rocket-queen-text-error {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 900;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 45px;
+}
+
+.rocket-queen-error-progress {
+  width: 287px;
+  height: 3px;
+  background: linear-gradient(90deg, #E00000 0%, #E00000 100%) left /0% 100% no-repeat #D9D9D9;
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+@keyframes animateErrorProgress {
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.rocket-queen-top-content {
+  position: absolute;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rocket-queen-name-bot {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  text-shadow: black 0 0 30px;
+}
+
+.rocket-queen-print-signal {
+  position: absolute;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 217px;
+  height: 217px;
+  background-color: #ae5506;
+  border: 4px solid white;
+  border-radius: 50%;
+  font-size: 3.2em;
+  font-weight: 500;
+  transition: all .5s;
+  z-index: 10;
+}
+
+.rocket-queen-print-signal span {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.rocket-queen-stop-signal-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 25px auto;
+  width: 230px;
+  transition: all .5s;
+}
+
+.rocket-queen-stop-timer {
+  font-size: 20px;
+  font-weight: 900;
+  height: 35px;
+  text-shadow: 0 0 10px black;
+}
+
+.rocket-queen-stop-progress {
+  width: 230px;
+  height: 18px;
+  background: linear-gradient(90deg, #ff7800 0%, #d4b103 100%) left /0% 100% no-repeat #D9D9D9;
+  border-radius: 15px;
+}
+
+@keyframes animateProgress {
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.rocket-queen-button-content {
+  position: absolute;
+  top: 80px;
+}
+
+.rocket-queen-button-game {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 220px;
+}
+
+.rocket-queen-get-signal, .rocket-queen-get-signal-two {
+  /* box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05); */
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 24px;
+  background-color: #ff7800;
+  color: white;
+  text-shadow: white 0 0 30px;
+  padding: 5px 0px;
+}
+
+
+.rocket-queen-get-signal {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+  min-height: 65px;
+  z-index: 0;
+}
+
+.rocket-queen-get-signal-two {
+  position: absolute;
+  /* height: 65px; */
+  width: 220px;
+  border: none;
+  cursor: pointer;
+  z-index: -1;
+  transition: all .2s;
+  opacity: 0.85;
+}
+
+
+.rocket-queen-game-here {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 160px;
+  padding: 10px 15px;
+  background: white;
+  font-size: 22px;
+  /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05); */
+  border-radius: 30px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all .2s;
+  z-index: 4;
+}
+
+.rocket-queen-get-signal::before,
+.rocket-queen-get-signal-two::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  z-index: -1;
+  background: linear-gradient(90deg, #b96200 1%, #ff861c 100%);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  opacity: 0.6;
+  filter: blur(15px);
+  border-radius: 30px;
+}
+
+.rocket-queen-game-here::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  z-index: -1;
+  background: linear-gradient(90deg, white 0%, white 80%);
+  /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); */
+  filter: blur(5px);
+  border-radius: 30px;
+}
+
+.rocket-queen-get-signal:active,
+.rocket-queen-game-here:active,
+.rocket-queen-get-signal-two:active {
+  transform: scale(95%);
+}
+
+.rocket-queen-deactivate {
+  opacity: 0;
+}

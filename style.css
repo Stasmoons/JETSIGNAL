@@ -1,0 +1,331 @@
+/* ÐžÐ±Ñ‰Ð¸Ðµ ÑÑ‚Ð¸Ð»Ð¸ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  pointer-events: none;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#141414 0% 50%, #6f1e07 100%);
+  color: #ffffff;
+}
+
+select:active,
+select:focus {
+  outline: none
+}
+
+.b-none {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.b-show {
+  display: block;
+  animation: showBlock 1s linear forwards;
+}
+
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.instructions {
+  position: absolute;
+  z-index: 990;
+  width: 100%;
+  /*height: 100vh; */
+  top: 0;
+  background: rgba(61, 61, 61, 0.8)
+}
+
+.block-content {
+  margin-bottom: 10px;
+}
+
+.instructions-content {
+  padding: 30px 20px 0 20px;
+}
+
+.block-content p {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/*Ð¨Ð°Ð¿ÐºÐ°*/
+
+.header {
+  height: 120px;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+  border-bottom: 5px solid #fa5109;
+  box-shadow: 0 0 15px #fa5109;
+  margin-bottom: 100px;
+}
+
+.header-inner {
+  position: absolute;
+  text-align: left;
+  top: 25px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+.header-logo-text {
+  font-family: 'DrukWideCyr-Bold', sans-serif;
+  font-size: 1.5em;
+  font-weight: 0;
+  position: absolute;
+  left: 4%;
+  text-align: left;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+}
+
+
+.header-inner p {
+  text-align: left;
+}
+
+
+
+.header-logo-img {
+  background-image: url('assets/icon/menu/logo.png');
+  background-position: center;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 7%;
+  width: 80px;
+  aspect-ratio: 1;
+  vertical-align: center;
+  margin-top: -8px;
+}
+
+/*ÐšÐ½Ð¾Ð¿ÐºÐ¸ Ð¼ÐµÐ½ÑŽ*/
+.menu {
+  position: absolute;
+  right: 10%;
+  bottom: 20px;
+  left: 10%;
+  background: #2a2228;
+  border-radius: 20px;
+
+  height: 10vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  
+  /* !!!! */
+  display: none;
+}
+
+.menu-button-inner {
+  position: relative;
+  width: 260px;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 120px;
+  height: 75px;
+
+  background: none;
+  border: none;
+
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-button img {
+  margin-bottom: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.menu-button-active {
+  background: #1B1B1A;
+  border-radius: 20px;
+  width: 90px;
+  height: 71px;
+  position: absolute;
+  z-index: 0;
+}
+
+.menu-button-position {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Ð’Ñ‹Ð±Ð¾Ñ€ Ð¸Ð³Ñ€Ñ‹*/
+
+.choose div{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  width: 80vw;
+}
+
+.choose p {
+  margin-top: 10vh;
+  font-size: 1.8em;
+  font-weight: 450;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.choose-card {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height: 40vh;
+  padding: 0px;
+
+  background: #2F2F2E;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.choose-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 60vw;
+  height: 70vh;
+  border-radius: 10%;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#aviator-go {
+  background-image: url("assets/icon/choose/aviator.png");
+}
+
+#rocket-queen-go {
+  background-image: url("assets/icon/choose/rocket-queen.png");
+}
+
+#luckyjet-go {
+  background-image: url("assets/icon/choose/luckyjet.png");
+}
+
+.choose {
+  position: absolute;
+  top: 90px;
+}
+
+.choose-button:not(:first-child) {
+  margin-top: 15px;
+}
+
+/*info*/
+.info-inner {
+  display: flex;
+  flex-direction: column;
+
+  background: #2F2F2E;
+  border-radius: 20px;
+}
+
+.info-title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.info-text {
+  font-size: 11px;
+  width: 300px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+/*channel*/
+
+.channel-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.channel-title {
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.channel-button {
+  position: relative;
+  width: 270px;
+  height: 52px;
+  background: #29B6F6;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+}

@@ -1,0 +1,316 @@
+.mines {
+  height: 100vh;
+  width: 100%;
+
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+
+  background-color: #07103D;
+}
+
+.mines-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.mines-close-instructions {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.mines-close-instructions button {
+  width: 50px;
+  height: 50px;
+  background: #F39801;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mines-close-instructions button img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.mines-instructions-open {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  z-index: 2;
+}
+
+.mines-instructions-open button {
+  width: 40px;
+  height: 40px;
+  background: #F39801;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mines-instructions-open button img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.mines-logo-game {
+  width: 250px;
+  z-index: 1;
+  top: 0;
+}
+
+.mines-button-back {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 500;
+}
+
+.mines-button-back button {
+  cursor: pointer;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  position: relative;
+  background: #F39801;
+}
+
+.mines-button-back button img {
+  display: flex;
+  margin: 0 auto;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+.mines-decor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0eg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.mines-one-win {
+  position: absolute;
+  right: 51px;
+  top: 105px;
+  animation: tilt-shaking 0.3s infinite;
+}
+
+.mines-two-win {
+  position: absolute;
+  bottom: 10px;
+  left: 17px;
+  animation: tilt-shaking 0.3s infinite;
+}
+
+.mines-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/mines/images/background.png");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
+
+.mines-text-top {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #ffffff;
+  font-weight: 900;
+  padding-bottom: 80px;
+  /* margin-bottom: 40px; */
+}
+
+.mines-text-title {
+  font-size: 25px;
+}
+
+.mines-text-subtitle {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-shadow: black 1px 1p 2px, black -1px 1px 2px, black 1px -1px 2px, black -1px -1px 2px;
+}
+
+.mines-game-screen {
+  background-image: url("/assets/mines/icons/screen.svg");
+  width: 293px;
+  height: 293px;
+  margin: auto;
+}
+
+.mines-screen-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mines-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.mines-deactive {
+  opacity: 0;
+  transition: 0.1s;
+}
+
+.mines-screenStart {
+  position: fixed;
+}
+
+.mines-loading {
+  width: 100px;
+  height: 100px;
+  transition: 0.1s ease-in;
+  position: fixed;
+}
+
+.mines-img-signal {
+  width: 250px;
+  height: 250px;
+  /* margin-top: -50px; */
+  border-radius: 10px;
+  transition: 0.1s;
+  border: solid 2px white;
+}
+
+.mines-game-button {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+
+.mines-get-signal {
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 24px;
+  background-color: #e801e8;
+  color: white;
+  text-shadow: white 0 0 30px;
+  position: relative;
+  height: 65px;
+  width: 220px;
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+  z-index: 0;
+  /* font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  border: none;
+  color: #ffffff;
+  width: 270px;
+  height: 50px;
+  background-color: #F39801;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px #F39801;
+  border-radius: 8px;
+  transition: 0.2s ease-in; */
+}
+
+.mines-get-signal::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  z-index: -1;
+  background: linear-gradient(90deg, #e801e8 1%, #ff01dd 100%);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  opacity: 0.6;
+  filter: blur(15px);
+  border-radius: 30px;
+}
+
+.mines-game-here {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 220px;
+  height: 56px;
+  background: white;
+  font-size: 22px;
+  border-radius: 30px;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .2s;
+  z-index: 4;
+}
+
+.mines-game-here::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  z-index: -1;
+  background: linear-gradient(90deg, white 0%, white 80%);
+  /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); */
+  filter: blur(5px);
+  border-radius: 30px;
+}
+
+.aviator-get-signal:active,
+.aviator-game-here:active,
+.aviator-get-signal-two:active {
+  transform: scale(95%);
+}
+
+.aviator-deactivate {
+  opacity: 0;
+}
